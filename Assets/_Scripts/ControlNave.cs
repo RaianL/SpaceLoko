@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
+using Assets._Abstract;
 using System.Collections;
 
-public class ControlNave : MonoBehaviour {
-    Rigidbody2D body;
+public class ControlNave : PhysicObject {
     KeyCode foward = KeyCode.Space, left = KeyCode.LeftArrow, right = KeyCode.RightArrow;
     public float thrustForce;
     public float torqueForce;
@@ -14,7 +14,7 @@ public class ControlNave : MonoBehaviour {
     public float fuelMass;
     public bool infiniteFuel;
 	// Use this for initialization
-	void Start () {
+	public override void Start () {
         body = gameObject.GetComponent<Rigidbody2D>();
         UpdateMass();
 	}
@@ -40,7 +40,7 @@ public class ControlNave : MonoBehaviour {
     }
 	private void SolarPanel()
     {
-        
+
     }
 
 	// Update is called once per frame
@@ -59,7 +59,9 @@ public class ControlNave : MonoBehaviour {
             Rotate(-torqueForce);
         }
     }
-	void Update () {
+	public override void Update () {
         ManageInput();
+        getControllerInstance();
+        PhysicsUpdate();
     }
 }

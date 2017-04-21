@@ -6,8 +6,12 @@ using System.Text;
 
 namespace Assets._Abstract
 {
-    abstract class StaticObject : MonoBehaviour
+    public abstract class StaticObject : MonoBehaviour
     {
-
+        public Vector2 position;
+        public float Mass;
+        public abstract void UpdatePosition();
+        public abstract void Update();
+        public abstract void Start();
     }
 }
