@@ -3,7 +3,7 @@ using Assets._Abstract;
 using System.Collections;
 
 public class ControlNave : PhysicObject {
-    KeyCode foward = KeyCode.Space, left = KeyCode.LeftArrow, right = KeyCode.RightArrow;
+    KeyCode foward = KeyCode.LeftShift, left = KeyCode.LeftArrow, right = KeyCode.RightArrow;
     public float thrustForce;
     public float torqueForce;
     public float shipMass;
@@ -61,7 +61,6 @@ public class ControlNave : PhysicObject {
     }
 	public override void Update () {
         ManageInput();
-        getControllerInstance();
         PhysicsUpdate();
     }
 }

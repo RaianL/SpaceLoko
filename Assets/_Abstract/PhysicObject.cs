@@ -9,17 +9,12 @@ namespace Assets._Abstract
     public abstract class PhysicObject : MonoBehaviour
     {
         protected Rigidbody2D body;
-        protected StaticController controller;
         public abstract void Start();
         public abstract void Update();
-        protected void getControllerInstance()
-        {
-            controller = GameObject.FindGameObjectWithTag("GravityController").GetComponent<StaticController>();
-            // Consigue el coso que almacena todos los objetos gravitatorios estaticos
-        }
         protected void PhysicsUpdate()
         {
-            CalculateGravity(controller.ClosestBody(body.position)); // Actualiza la gravedad teniendo en cuenta el objeto estatico mas cercano
+            StaticObject closest = StaticController.ClosestBody(this);
+            if(closest != null) CalculateGravity(closest); // Actualiza la gravedad teniendo en cuenta el objeto estatico mas cercano
         }
         protected void CalculateGravity(StaticObject body)
         {
@@ -29,5 +24,7 @@ namespace Assets._Abstract
             Vector2 direction = (body.position - this.body.position).normalized; // Calcula la direccion hacia el otro objeto
             this.body.AddForce(force * direction); // Aplica la fuerza como yo aplico la mafia
         }
+        public float getMass() { return body.mass; }
+        public Vector2 getPosition() { return body.position; }
     }
 }
