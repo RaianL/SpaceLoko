@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Assets._Abstract;
 using System.Collections;
-
+//a
 public class ControlNave : PhysicObject {
     KeyCode foward = KeyCode.LeftShift, left = KeyCode.LeftArrow, right = KeyCode.RightArrow;
     public float thrustForce;
