@@ -10,6 +10,7 @@ namespace Assets._Abstract
     {
         public Vector2 position;
         public float Mass;
+        public float btime = 0;
         public abstract void UpdatePosition();
         public abstract void Update();
         public abstract void Start();

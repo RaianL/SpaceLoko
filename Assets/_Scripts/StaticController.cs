@@ -3,7 +3,7 @@ using Assets._Abstract;
 using System.Collections;
 using System.Collections.Generic;
 
-public class StaticController
+public class StaticControl
 {
 
     static List<StaticObject> bodies = new List<StaticObject>();

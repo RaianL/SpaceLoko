@@ -1,0 +1,11 @@
+Bienvenido a Space Loko.
+Este juego esta situado en el espacio y la exploracion del mismo.
+La nave tiene combustible y bateria, el combustible se utiliza para propulsarse.
+La bateria se carga con tus paneles solares y se utiliza para varias cosas.
+Podes rotar la nave con las flechas de izquierda y derecha o utilizando A y D.
+Podes aumentar la potencia del propulsor con W y reducirla con S.
+Tambien podes acrivar la propulsion maxima con SHIFT y cortarla con Ctrl.
+Esta es tu vida y la perdes al chocar muy rapido, estar muy cerca de algun sol (o ser atacado)
+Si perdes toda la vida, moris. Reapareces en el ultimo punto de guardado con una nave basica y los objetos que tenias quedan donde moriste. Los puntos de *no entiendo* estan en bases o estaciones espaciales.
+Si te quedas varado en el espacio, podes apretar R para comenzar la secuencia de autodestruccion.
+Podes abrir el menu con P. 

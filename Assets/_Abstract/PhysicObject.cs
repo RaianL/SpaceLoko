@@ -9,12 +9,17 @@ namespace Assets._Abstract
     public abstract class PhysicObject : MonoBehaviour
     {
         protected Rigidbody2D body;
+        protected StaticObject closest;
+        protected float btime = 0;
         public abstract void Start();
         public abstract void Update();
         protected void PhysicsUpdate()
         {
+            btime += Time.deltaTime;
             StaticObject closest = StaticController.ClosestBody(this);
-            if(closest != null) CalculateGravity(closest); // Actualiza la gravedad teniendo en cuenta el objeto estatico mas cercano
+            if (closest == null) return;
+            CalculateGravity(closest); // Actualiza la gravedad teniendo en cuenta el objeto estatico mas cercano
+            this.closest = closest;
         }
         protected void CalculateGravity(StaticObject body)
         {

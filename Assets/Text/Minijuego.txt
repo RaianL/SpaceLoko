@@ -1,0 +1,5 @@
+Acaba de activar el minijuego llamado: Carrera contra el tiempo.
+En este usted debera llegar al planeta indicado en el menor tiempo posible.
+De acuerdo al tiempo recibira mas o menos pesitos, menor tiempo mayor recompensa.
+Si tarda mas de 2 minutos en llegar no recibira ningun pesito.
+Buena suerte!
